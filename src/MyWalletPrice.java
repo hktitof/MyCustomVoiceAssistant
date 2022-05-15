@@ -35,9 +35,9 @@ public class MyWalletPrice {
 		
 		try {
 			
-			speak(String.valueOf(Float.parseFloat(
+			System.out.println((String.valueOf(Float.parseFloat(
 					Jsoup.connect("https://www.binance.com/en/price/wax").followRedirects(false).timeout(8000)
-					.get().body().getElementsByClass("css-12ujz79").text().substring(2, 10))*415).substring(0, 5)+" $");
+					.get().body().getElementsByClass("css-12ujz79").text().substring(2, 10))*415).substring(0, 5)+" $"));
 
 
 		} catch (IOException e) {

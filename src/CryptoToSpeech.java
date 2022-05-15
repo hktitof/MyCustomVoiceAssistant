@@ -41,7 +41,8 @@ public class CryptoToSpeech {
 		try {
 			Document document = Jsoup.connect("https://www.binance.com/en/price/wax").followRedirects(false).timeout(8000).get();
 			String value =document.body().getElementsByClass("css-12ujz79").text();
-			speak(value.substring(1, 10)+" $");
+			System.out.println(value.substring(0,8));
+//			speak(value.substring(1, 10)+" $");
 
 		} catch (IOException e) {
 			e.printStackTrace();
